@@ -15,6 +15,28 @@ public class LinkedList<T>{
       }
     }
 
+    public void eliminarPorTelefono(String telefono){
+        if (head == null){
+            return;
+        } 
+
+        if (head.getData() instanceof Contacto && ((Contacto) head.getData()).getTelefono().equals(telefono)){
+            head = head.getNext();
+            return;
+        }
+
+        Node<T> current = head;
+        while(current.getNext() != null){
+            if (current.getNext().getData() instanceof Contacto && ((Contacto) current.getNext().getData()).getTelefono().equals(telefono)){
+                current.setNext(current.getNext().getNext());
+                return;
+            }
+            current = current.getNext();
+        }
+
+    }
+
+
     public void display(){
         Node<T> current = head;
         while(current != null){
