@@ -1,6 +1,6 @@
 public class DataTypeExamples<T>{
 
-    public static void ejemploPrimitivo(){
+    public void ejemploPrimitivo(){
     LinkedList<Integer> lista = new LinkedList<>();
 
     lista.insert(1);
@@ -9,29 +9,31 @@ public class DataTypeExamples<T>{
     lista.display();
     }
 
-    public static void ejemploComplejo(){
-
-        class Persona{
-            private String nombre;
-            private int edad;
-
-            public Persona(String nombre, int edad){
-                this.nombre = nombre;
-                this.edad = edad;
-            }
-
-            @Override
-            public String toString(){
-                return "Nombre: " + nombre + ", Edad: " + edad;
-            }
-        }
-        
+    public void meterObjetoaLista(){
         LinkedList<Persona> listaPersonas = new LinkedList<>();
-        listaPersonas.insert(new Persona("Juan", 25));
-        listaPersonas.insert(new Persona("Maria", 30));
+        listaPersonas.insert(new Persona("pedro", "07/24/2000"));
+        listaPersonas.insert(new Persona("maria", "08/17/2000"));
+        listaPersonas.insert(new Persona("luis", "09/10/2000"));
+
         listaPersonas.display();
+
     }
-}
+
+    public void meterStringsDoubleL(){
+        DoubleLinkedList<String> listaStringsD = new DoubleLinkedList<>();
+
+        listaStringsD.insert("a");
+        listaStringsD.insert("b");
+        listaStringsD.insert("publicclassmain");
+
+        listaStringsD.display();
+    }
+
+
+
+
+    }
+
 
 
 

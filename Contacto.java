@@ -1,21 +1,13 @@
-public class Contacto {
-    private String nombre;
+public class Contacto extends Persona {
     private String direccion;
     private String telefono;
 
-    public Contacto(String nombre, String direccion, String telefono) {
-        this.nombre = nombre;
-        this.telefono = telefono;
+    public Contacto(String nombre, String fechaNacimiento, String direccion, String telefono) {
+        super(nombre, fechaNacimiento);
         this.direccion = direccion;
+        this.telefono = telefono;
 }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
 
     public String getDireccion() {
         return direccion;
@@ -33,12 +25,8 @@ public class Contacto {
         this.telefono = telefono;
     }
 
-    @Override
+   @Override
     public String toString() {
-        return "Contacto{" +
-                "nombre='" + nombre + '\'' +
-                ", direccion='" + direccion + '\'' +
-                ", telefono='" + telefono + '\'' +
-                '}';
+        return super.toString() + ", Direccion: " + direccion + ", Telefono: " + telefono;
     }
 }
