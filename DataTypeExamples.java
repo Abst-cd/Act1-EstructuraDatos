@@ -29,9 +29,6 @@ public class DataTypeExamples<T>{
         listaStringsD.display();
     }
 
-
-
-
     }
 
 

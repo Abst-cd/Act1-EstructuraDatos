@@ -48,12 +48,17 @@ public class Main {
  
         int opcion = 0;
         while (opcion != 4) {
-         System.out.println("Menu:");
+        System.out.println("----------------------------");
+        System.out.println("----------------------------");
+        System.out.println("Menu:");
+        System.out.println("----------------------------");
+
         System.out.println("Elige opciones");
         System.out.println("1. Mostrar listas");
         System.out.println("2. Hacer operaciones en las listas");
         System.out.println("3. Mostrar tipos de datos");
         System.out.println("4. Salir");
+        System.out.println("----------------------------");
 
         opcion = Integer.parseInt(entrada.readLine());
 
